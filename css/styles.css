@@ -1,0 +1,149 @@
+:root {
+    --text-lg: 2rem;
+    --text-md: 1rem;
+
+    --primary: hsl(158, 36%, 37%);
+    --primary-dark: hsl(158, 38%, 18%);
+    --secondary: hsl(30, 38%, 92%);
+    --neutral-100: hsl(228, 12%, 48%);
+    --neutral-200: hsl(212, 21%, 14%);
+}
+
+
+
+*::after,
+*,
+*:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    font-size: var(--text-md);
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: var(--secondary);
+    font-family: "Montserrat", sans-serif;
+    display: grid;
+    place-items: center;
+    color: var(--neutral-200);
+}
+
+h1,
+h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: var(--text-lg);
+}
+
+main {
+    width: min(95%, 600px);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+
+main>div:first-child {
+    width: 100%;
+    min-height: 300px;
+    background-image: url(/images/image-product-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+main>div:last-child {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    p {
+
+        color: var(--neutral-100);
+    }
+
+    &>p:first-of-type {
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+    }
+
+    &>div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        h2 {
+            color: var(--primary);
+        }
+
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+button {
+    cursor: pointer;
+    border: none;
+    padding-block: 1.5rem;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    color: white;
+    font-weight: 700;
+
+    &:hover {
+        background-color: var(--primary-dark);
+        transition: all 0.15s ease-in-out;
+    }
+}
+
+button img {
+    width: 1.5rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-block: 0.25rem;
+}
+
+.attribution a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 30rem) {
+    main {
+        flex-direction: row;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    main>div:first-child,
+    main>div:last-child {
+        width: 50%;
+    }
+
+    main>div:first-child {
+        min-height: 100%;
+        background-image: url(/images/image-product-desktop.jpg);
+    }
+
+}
