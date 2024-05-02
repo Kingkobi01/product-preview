@@ -39,7 +39,7 @@ h2 {
     font-size: var(--text-lg);
 }
 
-main {
+article {
     width: min(95%, 600px);
     margin-block: 2rem;
     border-radius: 1rem;
@@ -51,7 +51,7 @@ main {
 }
 
 
-main>div:first-child {
+article>div:first-child {
     width: 100%;
     min-height: 300px;
     background-image: url(../images/image-product-mobile.jpg);
@@ -59,7 +59,8 @@ main>div:first-child {
     background-size: cover;
 }
 
-main>div:last-child {
+
+article>div:last-child {
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -133,18 +134,19 @@ button img {
 }
 
 @media screen and (min-width: 30rem) {
-    main {
+    article {
         flex-direction: row;
     }
 
-    main>div:first-child,
-    main>div:last-child {
+    article>div:first-child,
+    article>div:last-child {
         width: 50%;
     }
 
-    main>div:first-child {
+    article>div:first-child {
         min-height: 100%;
         background-image: url(../images/image-product-desktop.jpg);
     }
+
 
 }
